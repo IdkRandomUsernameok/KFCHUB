@@ -100,14 +100,5 @@ game.DescendantAdded:Connect(function(des)
     end
 end)
 
-Players.PlayerRemoving:Connect(function(player)
-    if player == Plr then
-        for _, file in next, listfiles("") do
-            if file:find("customObject") then
-                delfile(file)
-            end
-        end
-    end
-end)
 
 return Functions
